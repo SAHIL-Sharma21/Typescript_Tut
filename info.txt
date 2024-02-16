@@ -1,0 +1,2 @@
+>> Starting our typeScript tut by hitesh Sir 
+>> this file is cerated for commit purpose only..
