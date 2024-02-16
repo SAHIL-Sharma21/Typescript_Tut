@@ -1,2 +1,7 @@
 >> Starting our typeScript tut by hitesh Sir 
 >> this file is cerated for commit purpose only..
+
+NOTE: TypeScript is a superset of javascript.
+>> TypeScript is all about Type Saftey.
+
+Q What TypeScript does? >> its only Static Checking.
