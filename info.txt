@@ -5,3 +5,5 @@ NOTE: TypeScript is a superset of javascript.
 >> TypeScript is all about Type Saftey.
 
 Q What TypeScript does? >> its only Static Checking.
+and Analyze the code as we type in. That's it what typeScript does.
+>> typeScript is just a Development tool, our project still runs javascript.
