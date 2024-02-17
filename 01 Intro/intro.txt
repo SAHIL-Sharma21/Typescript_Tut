@@ -1,1 +1,3 @@
 >>> This is the intro file for the typescript 
+>> typescript installation gloabally
+npm install -g typescript 
