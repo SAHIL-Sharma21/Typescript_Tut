@@ -1,7 +1,7 @@
 //first Ts file.
 
 //creating obj in ts
-const user = {
+let user = {
     name: "Sahil",
     age: 25
 }
