@@ -7,12 +7,12 @@ const user = {
 }
 
 // ----------------------------------------------------------------------------------------------------------//
-function createUser(user :{name: string, isPaid: boolean}) {
-    console.log(user.name);
-    console.log(user.isPaid);
-}
+// function createUser(user :{name: string, isPaid: boolean}) {
+//     console.log(user.name);
+//     console.log(user.isPaid);
+// }
 
-createUser({name: "Sahil", isPaid: false});
+// createUser({name: "Sahil", isPaid: false});
 
 //whats if we give one extra key - value pair in object
 // createUser({name:"Rahul", isPaid: true, email: "Rahul@support.com"}); this is the error we cannot pass so to make this working we can do like this.
@@ -23,12 +23,8 @@ let newUser = {
 }
 
 //now we will pass this object in our function call
-const result = createUser(newUser); // this is not showing error.
-console.log(result);
-
-
-
-
+// const result = createUser(newUser); // this is not showing error.
+// console.log(result);
 
 
 // function return object
@@ -42,6 +38,26 @@ function createUserCourse(): {name: string, price: number}{
 }
 console.log(createUserCourse());
  
+
+
+// Type aliases
+type User = {
+    name: string,
+    email: string,
+    isPaid: boolean
+}
+
+//now lets create function >>> pssing user of type User
+// function createUser(user: User) {}
+createUser({name: "Sahil", email: "", isPaid: true});
+
+//return type is also User.
+function createUser(user: User): User {
+    return {name: user.name, email: user.email, isPaid: user.isPaid}
+}
+console.log(createUser({name: "Robin", email: "Robin@demon.com", isPaid: true}));
+
+
 
 
 export {}

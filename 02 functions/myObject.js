@@ -8,11 +8,11 @@ var user = {
     isActive: true
 };
 // ----------------------------------------------------------------------------------------------------------//
-function createUser(user) {
-    console.log(user.name);
-    console.log(user.isPaid);
-}
-createUser({ name: "Sahil", isPaid: false });
+// function createUser(user :{name: string, isPaid: boolean}) {
+//     console.log(user.name);
+//     console.log(user.isPaid);
+// }
+// createUser({name: "Sahil", isPaid: false});
 //whats if we give one extra key - value pair in object
 // createUser({name:"Rahul", isPaid: true, email: "Rahul@support.com"}); this is the error we cannot pass so to make this working we can do like this.
 var newUser = {
@@ -21,8 +21,8 @@ var newUser = {
     email: "Rahul@support.com"
 };
 //now we will pass this object in our function call
-var result = createUser(newUser); // this is not showing error.
-console.log(result);
+// const result = createUser(newUser); // this is not showing error.
+// console.log(result);
 // function return object
 function createCourse() {
     return {};
@@ -32,3 +32,11 @@ function createUserCourse() {
     return { name: "Nextjs", price: 50000 };
 }
 console.log(createUserCourse());
+//now lets create function >>> pssing user of type User
+// function createUser(user: User) {}
+createUser({ name: "Sahil", email: "", isPaid: true });
+//return type is also User.
+function createUser(user) {
+    return { name: user.name, email: user.email, isPaid: user.isPaid };
+}
+console.log(createUser({ name: "Robin", email: "Robin@demon.com", isPaid: true }));
