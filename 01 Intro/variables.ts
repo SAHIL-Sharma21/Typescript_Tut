@@ -20,11 +20,31 @@ console.log(myage);
 let userId: number = 321145;
 let user_id: number = 234.564;
 
+//Type inference -- this is the good pratice in ts
+let user_ID_1 = 4563;
+user_ID_1.toFixed();
+
+
+
 
 // boolean
 let isLogggedIn: boolean = true;
 
-
+// Any datatype
+//TypeScript also has a special type, any, that you can use whenever you don’t want a particular value to cause typechecking errors.
+// let hero;
+// function getHero(){
+//     return "Spiderman"
+// }
+// hero = getHero();
+//above hero is inferred as any and we dont want this in ts otherwise there is no point in using ts
+// so avoid this we can give particular datatype to variables
+let hero: string;
+function getHero(){
+    return "Spiderman"
+}
+hero = getHero(); //now our hero variable always accept string datatype not the other datatype.
+console.log(hero);
 
 
 
