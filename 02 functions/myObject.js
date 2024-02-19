@@ -32,11 +32,19 @@ function createUserCourse() {
     return { name: "Nextjs", price: 50000 };
 }
 console.log(createUserCourse());
-//now lets create function >>> pssing user of type User
-// function createUser(user: User) {}
-createUser({ name: "Sahil", email: "", isPaid: true });
-//return type is also User.
-function createUser(user) {
-    return { name: user.name, email: user.email, isPaid: user.isPaid };
-}
-console.log(createUser({ name: "Robin", email: "Robin@demon.com", isPaid: true }));
+//creating a user of type User
+var myUser = {
+    _id: "42552",
+    name: "Sahil",
+    email: "Sahil@dev.com",
+    isActive: false,
+};
+//changing myUser values after defining
+// myUser._id = "72372" // we cannot re-assign as _id is readonly
+myUser.email = "Sahil@gmail.com";
+var details = {
+    cardNumber: "FGTYWN527282",
+    cardDate: "24/01/2039",
+    cvv: 456
+};
+console.log(details);
