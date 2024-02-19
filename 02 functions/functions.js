@@ -9,8 +9,10 @@ Object.defineProperty(exports, "__esModule", { value: true });
 // addTwo("3");
 // Solution to above problem can be solve by this
 //number method
+//returing from the function when we return hello in below method it will not give error but this is not we want.. we have to specify the return of the functions
 function addTwo(num) {
     return num + 2;
+    // return "Hello";
 }
 var result = addTwo(3); // alwyas pass a number to it >> that is the work of Ts.
 console.log(result);
@@ -33,3 +35,20 @@ var login = function (name, email, isPaid) {
 };
 var userData = login("Sahil", "sahil@dev");
 console.log(userData);
+// Returing more than 1 type from functions
+// function getValue(val: number): boolean {
+//     if(val > 5) {
+//         return true;
+//     }
+//     return "200 OK"
+// }
+// getValue(6);
+// in arrow functions
+var getHello = function (s) {
+    return "";
+};
+//Ts automatically predicts the type
+// const heros = ["Zoro", "Ace", "Luffy"];
+var heros = [2, 4, 6];
+var heroVal = heros.map(function (val) { return "hero: ".concat(val); });
+console.log(heroVal);
