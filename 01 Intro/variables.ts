@@ -16,6 +16,15 @@ let myage: number;
 myage = 24;
 console.log(myage);
 
+//number
+let userId: number = 321145;
+let user_id: number = 234.564;
+
+
+// boolean
+let isLogggedIn: boolean = true;
+
+
 
 
 

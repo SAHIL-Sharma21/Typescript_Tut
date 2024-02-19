@@ -12,3 +12,8 @@ console.log(word);
 var myage;
 myage = 24;
 console.log(myage);
+//number
+var userId = 321145;
+var user_id = 234.564;
+// boolean
+var isLogggedIn = true;
