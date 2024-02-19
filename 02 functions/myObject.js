@@ -8,8 +8,9 @@ var user = {
     isActive: true
 };
 // ----------------------------------------------------------------------------------------------------------//
-function createUser(_a) {
-    var string = _a.name, boolean = _a.isPaid;
+function createUser(user) {
+    console.log(user.name);
+    console.log(user.isPaid);
 }
 createUser({ name: "Sahil", isPaid: false });
 //whats if we give one extra key - value pair in object
@@ -22,7 +23,6 @@ var newUser = {
 //now we will pass this object in our function call
 var result = createUser(newUser); // this is not showing error.
 console.log(result);
-console.log(createUser({ name: "Rahul", isPaid: true }));
 // function return object
 function createCourse() {
     return {};

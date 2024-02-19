@@ -7,7 +7,10 @@ const user = {
 }
 
 // ----------------------------------------------------------------------------------------------------------//
-function createUser({name: string, isPaid: boolean}) {}
+function createUser(user :{name: string, isPaid: boolean}) {
+    console.log(user.name);
+    console.log(user.isPaid);
+}
 
 createUser({name: "Sahil", isPaid: false});
 
@@ -23,7 +26,7 @@ let newUser = {
 const result = createUser(newUser); // this is not showing error.
 console.log(result);
 
-console.log(createUser({name: "Rahul", isPaid: true}));
+
 
 
 
