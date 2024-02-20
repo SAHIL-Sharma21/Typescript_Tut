@@ -14,3 +14,11 @@ var power = []; //now the power is a type of array of numbers.
 var allUser = []; // allUser is type of user array
 allUser.push({ name: "Sahil", isActive: true });
 console.log(allUser);
+//another way is array of array
+var MLpoints = [
+    [2, 4, 6],
+    [3, 5, 7],
+    [8, 10, 12],
+    [9, 11, 13]
+];
+console.log(MLpoints);

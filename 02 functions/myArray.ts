@@ -26,3 +26,13 @@ type User = {
 const allUser: User[] = []; // allUser is type of user array
 allUser.push({name: "Sahil", isActive: true})
 console.log(allUser);
+
+
+//another way is array of array
+const MLpoints: number[][] = [
+    [2, 4, 6],
+    [3, 5, 7],
+    [8, 10, 12],
+    [9, 11, 13]
+];
+console.log(MLpoints);
