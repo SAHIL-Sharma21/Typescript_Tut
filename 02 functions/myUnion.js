@@ -16,3 +16,24 @@ sahilSharma = {
     id: 34
 };
 console.log(sahilSharma);
+// union types in functions
+// function getDbId(id: number | string){
+//     // business code for for getting id
+//     console.log(id);
+// }
+// getDbId(23); //number
+// getDbId("56"); //String
+//now making more efficient code
+function getDbId(id) {
+    //Business logic
+    //checking if id is string then convrting id to lowerCase
+    if (typeof id === "string") {
+        id.toLowerCase();
+    }
+    else {
+        id += 2; // adding 2 to existing id
+    }
+    return id;
+}
+console.log(getDbId(4));
+console.log(getDbId("DEQ_JSJNE_ASSDA"));
