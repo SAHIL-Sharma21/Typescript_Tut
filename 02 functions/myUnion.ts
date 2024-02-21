@@ -53,3 +53,21 @@ function getDbId(id: number | string) {
 }
 console.log(getDbId(4));
 console.log(getDbId("DEQ_JSJNE_ASSDA"));
+
+// union in Array
+//problem >> using single type at one time
+let data1: number[] = [4, 6, 12]; //number array
+let data2: string[] = ["56", "21", "68"]; // string array
+
+//now using both type
+let data3: string[] | number[] = []; // this will have either string array or number array
+let data4: (string | number)[] = [56, 89., "ghshj", 32]; // this will have both the type in the single array.
+
+//literal type of assignment
+let pi: 3.14 = 3.14;
+// pi = 3.145; // this will give error.
+
+// good example
+let seatAlloatment: "Aisle" | "middle" | "window";
+seatAlloatment = "Aisle";
+// seatAlloatment = "crew"// not possible gives error.
