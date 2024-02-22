@@ -71,3 +71,6 @@ let pi: 3.14 = 3.14;
 let seatAlloatment: "Aisle" | "middle" | "window";
 seatAlloatment = "Aisle";
 // seatAlloatment = "crew"// not possible gives error.
+
+
+export {};
