@@ -16,11 +16,50 @@ interface User {
     getCoupoun(coupounName: string, value: number): number,
 }
 
+// if we wamt to add more properties to the user then we can again make the User interface
+// this is also caled reopening of interface.
+interface User {
+    gitHubtoken: string
+}
+
+// interfernce inheritance
+interface Admin extends User { // we get al the properties of User to Admin
+    role: "Admin" | "TA" | "Learner" //lirteral
+}
+
 // crating a user 
-const userDetails: User = {
+// const userDetails: User = {
+//     DbId: 3123333,
+//     email: "Sahil@dev.sde",
+//     userId: 2324,
+//     gitHubtoken: "github",
+//     startTrial: () => {
+//         return "Trial done!"
+//     },
+//     // getCoupoun(name) {
+//     //     console.log(name);
+//     //     return 6363276;
+//     // },
+//     //another way
+//     getCoupoun: (name: "diwali sale discount", off: 30) => {
+//         console.log(off);
+        
+//         return 10
+//     }
+// }
+// userDetails.email = "Sahil@sde.google"
+// console.log(userDetails.startTrial());
+// // console.log(userDetails.getCoupoun("diwali sale discount"));
+// console.log(userDetails.getCoupoun("", 23));
+ 
+
+// admin 
+const userDetails: Admin = {
+    role: "Learner",
     DbId: 3123333,
     email: "Sahil@dev.sde",
     userId: 2324,
+    gitHubtoken: "github",
     startTrial: () => {
         return "Trial done!"
     },
@@ -35,10 +74,8 @@ const userDetails: User = {
         return 10
     }
 }
-userDetails.email = "Sahil@sde.google"
-console.log(userDetails.startTrial());
-// console.log(userDetails.getCoupoun("diwali sale discount"));
-console.log(userDetails.getCoupoun("", 23));
+console.log(userDetails.role);
  
+
 
 export {}
