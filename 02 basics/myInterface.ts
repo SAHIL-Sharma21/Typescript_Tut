@@ -11,7 +11,7 @@ interface User {
     // definig function of string return type
     // startTrial: () => string // string method
     //another way to write the method is
-    startTrial(): string,
+    startTrial(): string, //startTrial is a method which return string 
     //getCoupoun method
     getCoupoun(coupounName: string, value: number): number,
 }
