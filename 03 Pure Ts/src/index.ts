@@ -48,6 +48,8 @@ let userList: number[] = [24, 67, 78, 12, 55];
  // how classes are writen by profesinal devloper
  class Ticket {
 
+    // getter amd seter so below is the exmaple
+    private _ticketValue = 1; //making private proerty of ticketValue and we are going to define getter and setter for this property.
     readonly ticketId: string = "XYWI_HHWNNSAQWUI_NMSJ12327829"
     constructor(
         public ticketNumber: number, 
@@ -55,4 +57,33 @@ let userList: number[] = [24, 67, 78, 12, 55];
         private ticketOwner: string
         ){
     }
+
+    //private method in Ticket Class
+    private deleteTicket() {
+        console.log("ticket is deleted!");
+    }
+
+
+    //getter and setter
+    //getter
+    get getTicketNumber(): string {
+        return `ticket number ${this.ticketNumber}`;
+    }
+
+    //getter amd setter for this property
+    get ticketCount(): number{
+        return this._ticketValue;
+    }
+
+    // making setter and interview question arrives >> setter does not have a retuen type
+    set ticketCount(ticketNumber) {
+        if(ticketNumber <= 1){
+            throw new Error("ticket number should be greater than 1")
+        } 
+        this._ticketValue = ticketNumber; // setting ticketValue to ticketNumber
+    }
+
  }
+const newTicket = new Ticket(45, "25/02/2024", "Sahil");
+// newTicket.deleteTicket(); cannot access as methos is private.
+console.log(newTicket.getTicketNumber);

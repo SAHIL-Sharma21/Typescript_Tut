@@ -37,6 +37,31 @@ class Ticket {
         this.ticketNumber = ticketNumber;
         this.ticketIssueDate = ticketIssueDate;
         this.ticketOwner = ticketOwner;
+        // getter amd seter so below is the exmaple
+        this._ticketValue = 1; //making private proerty of ticketValue and we are going to define getter and setter for this property.
         this.ticketId = "XYWI_HHWNNSAQWUI_NMSJ12327829";
     }
+    //private method in Ticket Class
+    deleteTicket() {
+        console.log("ticket is deleted!");
+    }
+    //getter and setter
+    //getter
+    get getTicketNumber() {
+        return `ticket number ${this.ticketNumber}`;
+    }
+    //getter amd setter for this property
+    get ticketCount() {
+        return this._ticketValue;
+    }
+    // making setter and interview question arrives >> setter does not have a retuen type
+    set ticketCount(ticketNumber) {
+        if (ticketNumber <= 1) {
+            throw new Error("ticket number should be greater than 1");
+        }
+        this._ticketValue = ticketNumber; // setting ticketValue to ticketNumber
+    }
 }
+const newTicket = new Ticket(45, "25/02/2024", "Sahil");
+// newTicket.deleteTicket(); cannot access as methos is private.
+console.log(newTicket.getTicketNumber);
