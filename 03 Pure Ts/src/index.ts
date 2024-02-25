@@ -51,6 +51,10 @@ let userList: number[] = [24, 67, 78, 12, 55];
     // getter amd seter so below is the exmaple
     private _ticketValue = 1; //making private proerty of ticketValue and we are going to define getter and setter for this property.
     readonly ticketId: string = "XYWI_HHWNNSAQWUI_NMSJ12327829"
+
+    //protected in class >> proctected is accessible in this class and the class which extends this class. so it will be accessible in Events class
+    protected _ticketNum = 2;
+
     constructor(
         public ticketNumber: number, 
         public ticketIssueDate: string,
@@ -87,3 +91,15 @@ let userList: number[] = [24, 67, 78, 12, 55];
 const newTicket = new Ticket(45, "25/02/2024", "Sahil");
 // newTicket.deleteTicket(); cannot access as methos is private.
 console.log(newTicket.getTicketNumber);
+
+//making another classes and uisng inheritance
+class Events extends Ticket {
+    // here we donot get the private property of Ticket as it will be only accessible in Ticket Class.
+    // Public is accessible in this class.
+    isEvent: boolean = true
+    //defining method chnageTicketNum and changing _ticketNum which is declared in Ticket class and having proctected keyword.
+    changeTicketNum() {
+        this._ticketNum = 56;
+    } // we cannot access it oustside this class.
+}
+// const newEvents = new Events();
