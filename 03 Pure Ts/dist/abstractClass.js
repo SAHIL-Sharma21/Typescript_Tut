@@ -26,6 +26,7 @@ class Instagram extends TakePhoto {
         this.burst = burst;
     }
     // we have implement getSepia method 
+    // below mwthod can be overwriten by another values/calulations 
     getSepia() {
         console.log("Get sepia function called.");
     }

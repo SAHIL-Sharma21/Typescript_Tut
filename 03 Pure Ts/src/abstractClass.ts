@@ -34,6 +34,7 @@ class Instagram extends TakePhoto {
         }
 
         // we have implement getSepia method 
+        // below mwthod can be overwriten by another values/calulations 
         getSepia(): void {
             console.log("Get sepia function called.");
         }
