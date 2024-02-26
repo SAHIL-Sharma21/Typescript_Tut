@@ -8,6 +8,11 @@ interface TakePhoto {
     burst: number
 }
 
+//another intrface which has method in it
+interface Story {
+    createStory(): string, //createStory is a method which return string.
+}
+
 // making class of Instagram which implements this protocaol
 class Instagram implements TakePhoto {
 
@@ -19,11 +24,16 @@ class Instagram implements TakePhoto {
 }
 
 // another class for youtube >> we can add more fields as it is not in interface
-class Youtube implements TakePhoto {
+// what if Youtube want to have the Story interface, so we do it like this 
+class Youtube implements TakePhoto, Story {
     constructor(
         public cameraMode: string,
         public filter: string,
         public burst: number,
         public shorts: string, // ading extra field but not throwing error here.
     ){}
+
+    createStory(): string {
+        return `The story is created and in your drafts`;
+    }
 }

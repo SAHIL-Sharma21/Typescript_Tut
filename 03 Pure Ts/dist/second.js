@@ -11,11 +11,15 @@ class Instagram {
     }
 }
 // another class for youtube >> we can add more fields as it is not in interface
+// what if Youtube want to have the Story interface, so we do it like this 
 class Youtube {
     constructor(cameraMode, filter, burst, shorts) {
         this.cameraMode = cameraMode;
         this.filter = filter;
         this.burst = burst;
         this.shorts = shorts;
+    }
+    createStory() {
+        return `The story is created and in your drafts`;
     }
 }
