@@ -36,3 +36,24 @@ interface Bottle {
 }
 // making function call 
 identityFour<Bottle>({brand: "Cello", type: 20}); //function identityFour<Bottle>(val: Bottle): Bottle
+
+// generics in function/arrow functions
+// in this example products is a type array we are taking input and function return is Type T
+//T is the one of the value from that array.
+function getSearchProducts<T>(products: T[]): T {
+    // return products[2];
+    //another way we can understand is
+    
+    // some complex database calculation
+    const myIndex = 4;
+    return products[myIndex];
+}
+
+// now converting above function in arrow function
+// T is any type of array. in products
+//syntax of writing arrow functions with genrics
+// this , is common in react projects and it shows T is not jsx its a generic.
+const getMoreSearchProducts = <T,>(products: T[]): T => {
+    const myIndex = 5;
+    return products[myIndex];
+}
