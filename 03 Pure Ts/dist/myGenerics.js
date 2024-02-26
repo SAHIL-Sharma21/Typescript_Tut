@@ -44,3 +44,29 @@ const getMoreSearchProducts = (products) => {
     const myIndex = 5;
     return products[myIndex];
 };
+// generics in classes
+//making functions
+// there could be T, U or V as many as we want.
+function gamingInfo(val1, val2) {
+    return {
+        val1,
+        val2
+    };
+}
+function anotherFunction(val1, val2) {
+    return {
+        val1,
+        val2
+    };
+}
+anotherFunction(4, { connection: "database conected", username: "Sahil_senei", password: "sahil1234" });
+//now making class here
+class Sellable {
+    constructor() {
+        this.cart = [];
+    }
+    //defining method
+    addToCart(product) {
+        this.cart.push(product);
+    }
+}

@@ -57,3 +57,55 @@ const getMoreSearchProducts = <T,>(products: T[]): T => {
     const myIndex = 5;
     return products[myIndex];
 }
+
+
+// generics in classes
+
+//making functions
+// there could be T, U or V as many as we want.
+function gamingInfo <T, U extends number>(val1: T, val2: U): object {
+    return {
+        val1,
+        val2
+    }
+}
+
+// gamingInfo(3, "4");// error as U extends number and we cannot assign string to number.
+// another example
+
+interface Database {
+    connection: string,
+    username: string,
+    password: string
+}
+function anotherFunction <T, U extends Database>(val1: T, val2: U): {} {
+        return {
+            val1,
+            val2
+        }
+}
+anotherFunction(4, {connection: "database conected", username: "Sahil_senei", password:"sahil1234"});
+
+//now generics in class
+// define sellable - selling courses
+interface Quiz {
+    name: string,
+    type: string
+}
+
+//another selleable
+interface Course {
+    name: string,
+    author: string,
+    subject: string
+}
+
+//now making class here
+class Sellable<T> {
+    public cart: T[] = [];
+
+    //defining method
+    addToCart(product: T) {
+        this.cart.push(product);
+    }
+}
