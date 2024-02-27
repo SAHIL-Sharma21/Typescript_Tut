@@ -32,3 +32,22 @@ function printStr(str: string | string[] | null) {
         }
     }
 }
+
+// The in operator narrowing
+interface User {
+    email: string,
+    name: string
+}
+
+interface Admin {
+    email: string,
+    name: string,
+    isAdmin: boolean
+}
+
+function isAdminAccount(account: User | Admin) {
+    //checking if isAdmin in account then return account.isAdmin.
+    if("isAdmin" in account) {
+        return account.isAdmin;
+    }
+}
