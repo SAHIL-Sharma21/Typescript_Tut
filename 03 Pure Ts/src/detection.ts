@@ -51,3 +51,15 @@ function isAdminAccount(account: User | Admin) {
         return account.isAdmin;
     }
 }
+
+// Date is created by Date object with the new keyword
+// instance of narrowing
+//instance of is only used when ther is new keyword so this I have to remember....
+function logValue(x: Date | string){
+    if( x instanceof Date) {
+        console.log(x.toUTCString);
+    } else {
+        console.log(x.toLowerCase());
+    }
+}
+
