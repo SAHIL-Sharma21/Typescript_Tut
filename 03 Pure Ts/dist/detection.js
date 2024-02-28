@@ -48,3 +48,19 @@ function logValue(x) {
         console.log(x.toLowerCase());
     }
 }
+// using type predicate
+function isFish(pet) {
+    //in documentaion example they have typecasted pet as fish, so we are going to do the same
+    return pet.swim !== undefined;
+}
+//implemting our example
+function getFood(pet) {
+    if (isFish(pet)) {
+        pet;
+        return "Fish Foood";
+    }
+    else {
+        pet;
+        return "Bird Food";
+    }
+}

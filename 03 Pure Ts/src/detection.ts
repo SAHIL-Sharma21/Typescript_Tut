@@ -63,3 +63,25 @@ function logValue(x: Date | string){
     }
 }
 
+// type predicate
+
+//making type
+type Fish = {swim: () => void};
+type Bird  = {fly: () => void};
+
+// using type predicate
+function isFish(pet: Fish | Bird): pet is Fish {
+    //in documentaion example they have typecasted pet as fish, so we are going to do the same
+    return (pet as Fish).swim !== undefined;
+}
+
+//implemting our example
+function getFood(pet: Fish | Bird) {
+    if (isFish(pet)) {
+        pet
+        return "Fish Foood";
+    } else {
+        pet
+        return "Bird Food";
+    }
+}
