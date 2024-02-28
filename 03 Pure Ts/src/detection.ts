@@ -85,3 +85,49 @@ function getFood(pet: Fish | Bird) {
         return "Bird Food";
     }
 }
+
+//Discriminated unions
+interface Circle {
+    kind:  "circle",
+    radius: number
+}
+
+interface Square {
+    kind: "square",
+    side: number
+}
+
+interface Rectangle {
+    kind: "rectangle",
+    length: number,
+    width: number
+}
+
+//crerating shape type
+type Shape = Circle | Square | Rectangle
+
+//creating function 
+function getTrueName(shape: Shape) {
+    if (shape.kind === "circle") {
+        return Math.PI * shape.radius ** 2;
+    }
+    // return shape.side ** 2;
+}
+
+// The never type
+function getArea(shape: Shape) {
+    switch(shape.kind){
+        case "circle" :
+            return Math.PI * shape.radius ** 2;
+
+        case "square" : 
+            return shape.side * shape.side;
+
+        case "rectangle" :
+            return shape.length * shape.width;
+
+        default:
+            const _defaultForShape: never = shape // error is giving ass we can not checking for all the exhaustive cases i.e. Rectangle
+            return _defaultForShape;
+    }
+}
